@@ -1,6 +1,4 @@
-const letDict = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const FPS = 15;
-const effectWait = 5000; // In milliseconds
+const boundOffset = 20;
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -15,37 +13,29 @@ function randStr(strLen) {
 }
 
 document.addEventListener('DOMContentLoaded', async function() {
-  while(true) {
-    runEl = document.getElementById("textRandLoad");
-    oldText = runEl.innerText;
+  let offSet = document.getElementById("mainSection").getBoundingClientRect();
+  console.log(offSet);
 
-    effectText = randStr(oldText.length);
-    runEl.innerText = effectText;
-    runEl.style.display = 'unset';
+  let links = document.getElementsByClassName("linkText");
+  links = [...links];
+  links.forEach(element => {
+    let rect = element.getBoundingClientRect();
 
-    effectTime = Date.now();
-    frameTime = Date.now();
+    // Create the new element to be added
+    const bounder = document.createElement("div");
+    let scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+    bounder.className = "linker"
+    console.log(rect);
+    bounder.style.top = String(rect.top - offSet.top - boundOffset)+"px";
+    bounder.style.left = String(rect.left - offSet.left - boundOffset) +"px";
+    bounder.style.width = String(rect.right - rect.left + 2*boundOffset)+"px";
+    bounder.style.height = String(rect.bottom - rect.top + 2*boundOffset)+"px";
 
-    charInd = 0;
-    frame = 0;
-    while(charInd < oldText.length) {
-      if(oldText[charInd] == " ") {charInd++; effectTime = Date.now()}
+    // bounder.style.bottom = String(rect.bottom + 20)+"px";
+    // bounder.style.right = String(rect.right + 20)+"px";
+    console.log(bounder)
 
-      const effectSpeed = 200; //In milliseconds
-      effectText = (effectText.substring(0, charInd+1) + randStr(oldText.length - charInd - 1)).substring(0, oldText.length);
-      runEl.innerText = effectText;
-
-      if(Date.now() - effectSpeed >= effectTime) {
-        effectText = (oldText.substring(0, charInd+1) + effectText.substring(charInd+1)).substring(0, oldText.length);
-        runEl.innerText = effectText;
-        charInd += 1;
-        effectTime = Date.now();
-      }
-
-      if(Date.now() - 1000/FPS < frameTime) { await sleep(frameTime - Date.now() + 1000/FPS); frameTime = Date.now(); }
-      frame += 1;
-      // console.log(frame);
-    }
-    await sleep(effectInterval);
-  }
+    // Append the new element to the parent
+    element.appendChild(bounder);
+  });
 });
