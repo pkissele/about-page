@@ -1,6 +1,6 @@
 ---
 layout: none
-permalink: /photos
+permalink: /photo
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -21,60 +21,99 @@ permalink: /photos
         <div id="headerArea">
             <div id="headerWrap">
                 <div id="header">
-                    Photography.
+                    Photography Highlights
                 </div>
             </div>
         </div>
 
+        <div id="backLinkArea">
+            <a class="backLink" href="/">← Back to home</a>
+        </div>
+
         <div id="mainArea">
             <div id="imageGrid">
-                <div class="gridImgWrap" data-index="0">
+                <div class="gridImgWrap">
                     <img src="static/images/photos/DSCF0131_edited.jpg">
                     <div class="gridImgWrapContent">
-                        <h3>Blank</h3>
-                        <p>...</p>
+                        <h3>Climb</h3>
+                        <p></p>
                     </div>
                 </div>
-                <div class="gridImgWrap" data-index="1">
+                <div class="gridImgWrap">
+                    <img src="static/images/photos/BF4BCEA6_edited.jpg">
+                    <div class="gridImgWrapContent">
+                        <h3></h3>
+                        <p>Eventide</p>
+                    </div>
+                </div>
+                <div class="gridImgWrap">
                     <img src="static/images/photos/DSCF0215_edited.jpg">
                     <div class="gridImgWrapContent">
-                        <h3>Blank</h3>
-                        <p>...</p>
+                        <h3>Fog</h3>
+                        <p></p>
                     </div>
                 </div>
-                <div class="gridImgWrap" data-index="2">
+                <div class="gridImgWrap">
+                    <img src="static/images/photos/IMG_6614.jpg">
+                    <div class="gridImgWrapContent">
+                        <h3>Approach</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="gridImgWrap">
                     <img src="static/images/photos/DSCF0247_edited.jpg">
                     <div class="gridImgWrapContent">
-                        <h3>Blank</h3>
-                        <p>...</p>
+                        <h3>Winding</h3>
+                        <p></p>
                     </div>
                 </div>
-                <div class="gridImgWrap" data-index="3">
+                <div class="gridImgWrap">
+                    <img src="static/images/photos/IMG_4769_edit.jpg">
+                    <div class="gridImgWrapContent">
+                        <h3>Approach</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="gridImgWrap">
                     <img src="static/images/photos/DSCF0448_edited.jpg">
                     <div class="gridImgWrapContent">
-                        <h3>Blank</h3>
-                        <p>...</p>
+                        <h3>Serene</h3>
+                        <p></p>
                     </div>
                 </div>
-                <div class="gridImgWrap" data-index="4">
+                <div class="gridImgWrap">
                     <img src="static/images/photos/DSCF0578.jpg">
                     <div class="gridImgWrapContent">
-                        <h3>Blank</h3>
-                        <p>...</p>
+                        <h3>Austere</h3>
+                        <p></p>
                     </div>
                 </div>
-                <div class="gridImgWrap" data-index="5">
+                <div class="gridImgWrap">
                     <img src="static/images/photos/DSCF0650.jpg">
                     <div class="gridImgWrapContent">
-                        <h3>Blank</h3>
-                        <p>...</p>
+                        <h3>Scale</h3>
+                        <p></p>
                     </div>
                 </div>
-                <div class="gridImgWrap" data-index="6">
+                <div class="gridImgWrap">
                     <img src="static/images/photos/DSCF2528.jpg">
                     <div class="gridImgWrapContent">
-                        <h3>Blank</h3>
-                        <p>...</p>
+                        <h3>Clash</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="gridImgWrap">
+                    <img src="static/images/photos/IMG_1802.jpg">
+                    <div class="gridImgWrapContent">
+                        <h3>Night</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="gridImgWrap">
+                    <img src="static/images/photos/IMG_7394.jpg">
+                    <div class="gridImgWrapContent">
+                        <h3>Alone</h3>
+                        <p></p>
                     </div>
                 </div>
             </div>
@@ -97,12 +136,23 @@ permalink: /photos
         </div>
 
         <div id="footerArea">
-            Photography by Petr Kisselev is licensed under
-            <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>
-            <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="max-width: 1em; max-height: 1em; margin-left: 0.2em"/>
-            <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="max-width: 1em; max-height: 1em; margin-left: 0.2em"/>
-            <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="max-width: 1em; max-height: 1em; margin-left: 0.2em"/>
+            <div id="footerInnerWrap">
+                <div id="creditsFooter">
+                    Photography by Petr Kisselev is licensed under
+                    <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>
+                    <img class="licenseIcon" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg"/>
+                    <img class="licenseIcon" src="https://mirrors.creativecommons.org/presskit/icons/by.svg"/>
+                    <img class="licenseIcon" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg"/>
+                </div>
+            </div>
         </div>
     </div>
 </body>
+<script>
+    // Force scroll to top on page load
+    if (history.scrollRestoration) {
+        history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+</script>
 </html>

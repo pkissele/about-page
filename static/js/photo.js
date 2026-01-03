@@ -5,7 +5,7 @@ function openLightbox(gridItem) {
     const title = gridItem.querySelector("h3").textContent;
 
     document.getElementById("lightbox-img").src = imgEl.src;
-    // document.getElementById("lightbox-title").textContent = title;
+    document.getElementById("lightbox-title").textContent = title;
     document.getElementById("exifContent").innerHTML = '<div class="loading">Reading EXIF data...</div>';
 
     lightbox.classList.add("active");

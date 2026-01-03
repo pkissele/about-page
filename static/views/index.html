@@ -1,0 +1,144 @@
+---
+layout: none
+permalink: /
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="static/images/misc/logo.png">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/exif-js/2.3.0/exif.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petr Kisselev</title>
+</head>
+<body>
+    <div id="contentArea">
+        <div id="mainArea">
+            <!-- About Section with Photo -->
+            <div class="profileSection">
+                <div id="profilePhoto">
+                    <img id="portraitPic" src="static/images/casual2.png" alt="Petr Kisselev">
+                </div>
+                <div class="profileText">
+                    <div id="header">
+                        Petr Kisselev
+                    </div>
+                    <div id="headerSubtitle">
+                        Research, Photography, Tinkering
+                    </div>
+                    <div class="sectionContent">
+                        I am a student researcher, photographer, and developer with a passion for understanding complex systems and building innovative solutions. My work spans from pandemic modeling using graph neural networks to developing interactive computational tools and astrophysical simulations.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Photography Section -->
+            <div class="section">
+                <div class="sectionTitle">Photography</div>
+                <div class="sectionContent">
+                    <div class="itemDescription">
+                        A collection of my favorite shots.
+                    </div>
+                    <a href="/photo" class="photoPreviewLink">
+                        <div class="photoStackPreview">
+                            <div class="stackedPhoto photo1">
+                                <img src="static/images/photos/DSCF0131_edited.jpg">
+                            </div>
+                            <div class="stackedPhoto photo2">
+                                <img src="static/images/photos/DSCF0650.jpg">
+                            </div>
+                            <div class="stackedPhoto photo3">
+                                <img src="static/images/photos/DSCF2528.jpg">
+                            </div>
+                            <div class="viewArrow">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Research Section -->
+            <div class="section">
+                <div class="sectionTitle">Research</div>
+                <div class="sectionContent">
+                    <div class="researchItem">
+                        <div class="itemTitle">Pandemic prediction using metapopulation SIR + graph convolutional neural networks</div>
+                        <div class="itemDescription">
+                            Developed a reproduction number based framework for understandable prediction of pandemic progression. This research employs metapopulation SIR modeling coupled with Graph Convolutional Neural Networks to provide interpretable forecasts of disease spread. Published in SIURO.
+                        </div>
+                        <div class="itemDescription">
+                            “Modeling COVID-19 Spread in the USA using Metapopulation SIR Models Coupled with Graph Convolutional Neural Networks”,  SIAM Undergraduate Research Online journal, vol. 18 (2025) https://doi.org/10.1137/24S171694X
+                        </div>
+                        <a href="https://doi.org/10.1137/24S171694X" target="_blank" rel="noopener noreferrer" class="projectLinkBlock">
+                            <span class="linkText">View SIURO Publication</span>
+                            <div class="projectArrow">
+                                <img src="static/images/icons/arrow.svg" width="24" height="24" alt="arrow">
+                            </div>
+                        </a>
+                        <a href="https://arxiv.org/abs/2501.02043" target="_blank" rel="noopener noreferrer" class="projectLinkBlock">
+                            <span class="linkText">View arXiv Preprint</span>
+                            <div class="projectArrow">
+                                <img src="static/images/icons/arrow.svg" width="24" height="24" alt="arrow">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projects Section -->
+            <div class="section">
+                <div class="sectionTitle">Projects</div>
+                <div class="sectionContent">
+                    <div class="projectItem">
+                        <div class="itemTitle">Normal Debate</div>
+                        <div class="itemDescription">
+                            A web platform designed to facilitate structured and productive discussions.
+                        </div>
+                        <a href="https://normaldebate.com" target="_blank" rel="noopener noreferrer" class="projectLinkBlock">
+                            <span class="linkText">Visit normaldebate.com</span>
+                            <div class="projectArrow">
+                                <img src="static/images/icons/arrow.svg" width="24" height="24" alt="arrow">
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="projectItem">
+                        <div class="itemTitle">JavaScript 3D rasterizer</div>
+                        <div class="itemDescription">
+                            A complete 3D rendering engine developed from scratch using pure JavaScript, with no external libraries or frameworks. Created during my freshman year of high school, this project demonstrates fundamental computer graphics principles including rasterization, perspective projection, and real-time rendering.
+                        </div>
+                        <a href="/projects" class="projectLinkBlock">
+                            <span class="linkText">View demo</span>
+                            <div class="projectArrow">
+                                <img src="static/images/icons/arrow.svg" width="24" height="24" alt="arrow">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="footerArea">
+            <div id="footerInnerWrap">
+                © 2026 Petr Kisselev
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    // Force scroll to top on page load
+    if (history.scrollRestoration) {
+        history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+</script>
+</html>
