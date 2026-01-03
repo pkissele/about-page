@@ -1,2 +1,2 @@
-# personal-website
-Github to store and host personal website
+# about-page
+This git repo tracks my personal page.
